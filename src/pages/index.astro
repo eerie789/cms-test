@@ -1,0 +1,17 @@
+---
+import home from "../content/pages/home.json";
+import catalog from "../content/list/catalog.json";
+---
+
+<h1>{home.hero.heading}</h1>
+
+<section>
+  {
+    catalog.map((item) => (
+      <article>
+        <h2>{item.title}</h2>
+        <p>{item.description}</p>
+      </article>
+    ))
+  }
+</section>
